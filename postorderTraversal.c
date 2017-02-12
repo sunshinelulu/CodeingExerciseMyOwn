@@ -1,3 +1,9 @@
+/*
+ * postorderTraversal.h
+ * 后续遍历的非递归写法
+ *  Created on: 2016年12月30日
+ *      Author: lujuan
+ */
 #include <stdio.h>
 #include"myStack.h"
 #include<stdlib.h>

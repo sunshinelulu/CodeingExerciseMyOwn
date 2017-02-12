@@ -59,7 +59,7 @@ static Position DoubleRotateWithRight(Position k3){
 }
 static void UpdateHeight(Position P){
 	if(P != NULL){
-		P->Height = (Height(P->Left)>Height(P->Right)?Height(P->Left):Height(P->Right))+1;
+		P->Height= (Height(P->Left)>Height(P->Right)?Height(P->Left):Height(P->Right))+1;
 	}
 }
 AvlTree Insert(AvlElementType X, AvlTree T){

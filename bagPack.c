@@ -1,4 +1,9 @@
-//0-1背包问题的求解
+/*
+ * bagPack.c
+ * 0-1背包问题的求解
+ *  Created on: 2016年9月1日
+ *      Author: lujuan
+ */
 #include<stdlib.h>
 extern void printArray(int v[], int n);
 //w为物品的重量，v为物品的价值，n为物品的个数，W为背包能容纳的重量
