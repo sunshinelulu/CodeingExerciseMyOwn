@@ -11,7 +11,7 @@ struct AvlNode{
 	AvlElementType Element;
 	AvlTree Left;
 	AvlTree Right;
-	int Height;
+	int height;
 };
 AvlTree MakeEmpty(AvlTree T){
 	if(T != NULL){
@@ -25,15 +25,15 @@ static int Height(Position P){
 	if(P == NULL)
 		return -1;
 	else
-		return P->Height;
+		return P->height;
 }
 static Position SingleRotateWithLeft(Position k2){
 	Position k1 = k2->Left;
 	k2->Left = k1->Right;
 	k1->Right = k2;
 
-	k2->Height = (Height(k2->Left)>Height(k2->Right)?Height(k2->Left):Height(k2->Right))+1;
-	k1->Height = (Height(k1->Left)>Height(k1->Right)?Height(k1->Left):Height(k1->Right))+1;
+	k2->height = (Height(k2->Left)>Height(k2->Right)?Height(k2->Left):Height(k2->Right))+1;
+	k1->height = (Height(k1->Left)>Height(k1->Right)?Height(k1->Left):Height(k1->Right))+1;
 
 	return k1;
 }
@@ -42,8 +42,8 @@ static Position SingleRotateWithRight(Position k2){
 	k2->Right = k1->Left;
 	k1->Left = k2;
 
-	k2->Height = (Height(k2->Left)>Height(k2->Right)?Height(k2->Left):Height(k2->Right))+1;
-	k1->Height = (Height(k1->Left)>Height(k1->Right)?Height(k1->Left):Height(k1->Right))+1;
+	k2->height = (Height(k2->Left)>Height(k2->Right)?Height(k2->Left):Height(k2->Right))+1;
+	k1->height = (Height(k1->Left)>Height(k1->Right)?Height(k1->Left):Height(k1->Right))+1;
 
 	return k1;
 }
@@ -59,7 +59,7 @@ static Position DoubleRotateWithRight(Position k3){
 }
 static void UpdateHeight(Position P){
 	if(P != NULL){
-		P->Height= (Height(P->Left)>Height(P->Right)?Height(P->Left):Height(P->Right))+1;
+		P->height= (Height(P->Left)>Height(P->Right)?Height(P->Left):Height(P->Right))+1;
 	}
 }
 AvlTree Insert(AvlElementType X, AvlTree T){
@@ -69,7 +69,7 @@ AvlTree Insert(AvlElementType X, AvlTree T){
 			printf("Out of Space!\n");
 		else{
 			T->Element = X;
-			T->Height = 0;
+			T->height = 0;
 			T->Left = T->Right = NULL;
 		}
 	}else{
@@ -97,7 +97,7 @@ AvlTree Insert(AvlElementType X, AvlTree T){
 		}
 
 	}
-	T->Height = (Height(T->Left)>Height(T->Right)?Height(T->Left):Height(T->Right))+1;
+	T->height = (Height(T->Left)>Height(T->Right)?Height(T->Left):Height(T->Right))+1;
 	return T;
 
 

@@ -5,6 +5,7 @@
  *      Author: lujuan
  */
 #include<stdio.h>
+//打印数组里面的元素，v为数组首地址，n为数组的长度
 void printArray(int v[], int n)
 {
 	 int i;
