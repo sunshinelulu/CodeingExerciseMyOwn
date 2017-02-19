@@ -93,16 +93,16 @@ void Dijkstra(MGraph G, int v0, MinDist *D, Path *P){
 	}
 }
 
-int main()
-{
-	MGraph G;
-	setGraph(&G);
-	int v0=0;
-	MinDist D[Row];
-	Path P[Row];
-	Dijkstra(G, v0, D, P);
-	printArray(D, sizeof(D)/sizeof(int));
-	printArray(P, sizeof(P)/sizeof(int));
-
-	return 0;
-}
+//int main()
+//{
+//	MGraph G;
+//	setGraph(&G);
+//	int v0=0;
+//	MinDist D[Row];
+//	Path P[Row];
+//	Dijkstra(G, v0, D, P);
+//	printArray(D, sizeof(D)/sizeof(int));
+//	printArray(P, sizeof(P)/sizeof(int));
+//
+//	return 0;
+//}

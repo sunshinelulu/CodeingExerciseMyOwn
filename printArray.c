@@ -15,4 +15,13 @@ void printArray(int v[], int n)
 	 }
 	 printf("\n");
 }
+void printStrArray(char v[], int n)
+{
+	 int i;
+	 for(i = 0; i < n;++i)
+	 {
+		 printf("  %c", v[i]);
+	 }
+	 printf("\n");
+}
 
