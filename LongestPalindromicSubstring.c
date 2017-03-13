@@ -38,10 +38,10 @@ char* longestPalindrome(char* s) {
     return result;
 
 }
-int main(){
-	char s[] = "abcda";
-	char *temp = longestPalindrome(s);
-	printStrArray(temp, strlen(temp));
-	return 0;
-}
+//int main(){
+//	char s[] = "abcda";
+//	char *temp = longestPalindrome(s);
+//	printStrArray(temp, strlen(temp));
+//	return 0;
+//}
 
